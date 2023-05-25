@@ -1,0 +1,5 @@
+			
+			***** Services.Catalog *****
+- Options Pattern used to isolate the configuration settings
+- Automapper implemented
+- Static Factory method used in Shared/Dtos/Response.cs
