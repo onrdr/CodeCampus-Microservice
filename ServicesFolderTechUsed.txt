@@ -3,3 +3,12 @@
 - Options Pattern used to isolate the configuration settings
 - Automapper implemented
 - Static Factory method used in Shared/Dtos/Response.cs
+- MongoDb used and runs in docker as Services.Catalog.MongoDb
+
+			***** IdentityServer *****
+- Identity Server 4 implemented.
+- JWT implemented.
+- SQL Server used and runs in docker as IdentityDb
+
+			***** Services.Basket *****
+- Redis used and runs in docker as Services.Basket.RedisDb
