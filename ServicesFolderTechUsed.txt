@@ -16,3 +16,9 @@
 			***** Services.Discount *****
 - Dapper used
 - PostgreSQL used and runs in docker as Services.Discount.PostgreSQL
+
+			***** Services.Order *****
+- Ef Core used
+- SQL Server used and runs in docker as Services.Discount.SQLServer
+- Domain Driven Design approach used
+- CQRS Pattern implemented

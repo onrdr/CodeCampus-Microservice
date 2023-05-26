@@ -4,9 +4,11 @@
 - Service.PhotoStock			: http://localhost:5012
 - Services.Basket				: http://localhost:5013
 - Services.Discount				: http://localhost:5014
+- Services.Order				: http://localhost:5015
 
 Portainer						: localhost:9443
 Services.Catalog.MongoDb		: localhost:27017
 IdentityDb						: localhost:1433
 Services.Basket.RedisDb			: localhost:6379
 Services.Discount.PostgreSQLDb  : localhost:5432
+Services.Order.SQLServer		: localhost:1444
