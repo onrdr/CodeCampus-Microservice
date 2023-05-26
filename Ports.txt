@@ -1,7 +1,8 @@
 
-- Service.Catalog	: http://localhost:5011
-- IdentityServer	: http://localhost:5001
+- IdentityServer		: http://localhost:5001
+- Service.Catalog		: http://localhost:5011
+- Service.PhotoStock	: http://localhost:5012
 
-Portainer			: localhost:9443
-MongoDb				: localhost:27017
-IdentityDb			: localhost:1433
+Portainer				: localhost:9443
+MongoDb					: localhost:27017
+IdentityDb				: localhost:1433
