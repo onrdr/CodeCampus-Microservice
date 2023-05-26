@@ -12,3 +12,7 @@
 
 			***** Services.Basket *****
 - Redis used and runs in docker as Services.Basket.RedisDb
+
+			***** Services.Discount *****
+- Dapper used
+- PostgreSQL used and runs in docker as Services.Discount.PostgreSQL
