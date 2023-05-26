@@ -1,2 +1,7 @@
-Services
-- Catalog API : http://localhost:5011
+
+- Service.Catalog	: http://localhost:5011
+- IdentityServer	: http://localhost:5001
+
+Portainer			: localhost:9443
+MongoDb				: localhost:27017
+IdentityDb			: localhost:1433
