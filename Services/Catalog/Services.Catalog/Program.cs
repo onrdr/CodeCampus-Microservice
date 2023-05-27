@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Options;
+using Services.Catalog.Dtos;
 using Services.Catalog.Services;
 using Services.Catalog.Settings;
 using System.Reflection;
@@ -38,6 +39,19 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+
+    var categoryService = serviceProvider.GetRequiredService<ICategoryService>();
+
+    if (!(await categoryService.GetAllAsync()).Data.Any())
+    {
+        await categoryService.CreateAsync(new CategoryDto { Name = "Asp.net Core Kursu" });
+        await categoryService.CreateAsync(new CategoryDto { Name = "Asp.net Core API Kursu" });
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -45,6 +59,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseRouting();   
 app.UseAuthentication();
 app.UseAuthorization();
 
