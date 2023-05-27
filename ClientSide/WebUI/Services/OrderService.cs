@@ -96,12 +96,25 @@ public class OrderService : IOrderService
         var orderCreateInput = new OrderCreateInput()
         {
             BuyerId = _sharedIdentityService.GetUserId,
-            Address = new AddressCreateInput { Province = checkoutInfoInput.Province, District = checkoutInfoInput.District, Street = checkoutInfoInput.Street, Line = checkoutInfoInput.Line, ZipCode = checkoutInfoInput.ZipCode },
+            Address = new AddressCreateInput 
+            { 
+                Province = checkoutInfoInput.Province, 
+                District = checkoutInfoInput.District, 
+                Street = checkoutInfoInput.Street, 
+                Line = checkoutInfoInput.Line, 
+                ZipCode = checkoutInfoInput.ZipCode 
+            }
         };
 
         basket.BasketItems.ForEach(x =>
         {
-            var orderItem = new OrderItemCreateInput { ProductId = x.CourseId, Price = x.GetCurrentPrice, PictureUrl = "", ProductName = x.CourseName };
+            var orderItem = new OrderItemCreateInput 
+            { 
+                ProductId = x.CourseId, 
+                Price = x.GetCurrentPrice, 
+                PictureUrl = "", 
+                ProductName = x.CourseName 
+            };
             orderCreateInput.OrderItems.Add(orderItem);
         });
 
