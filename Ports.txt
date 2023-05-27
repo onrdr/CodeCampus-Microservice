@@ -5,6 +5,7 @@
 - Services.Basket				: http://localhost:5013
 - Services.Discount				: http://localhost:5014
 - Services.Order				: http://localhost:5015
+- Services.FakePayment			: http://localhost:5016
 
 Portainer						: localhost:9443
 Services.Catalog.MongoDb		: localhost:27017
